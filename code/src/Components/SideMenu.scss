@@ -1,0 +1,131 @@
+.sideMenu {
+  width: 20%;
+  height: 100%;
+  padding: 1.875rem;
+  border: .1rem solid rgba(0, 0, 0, .1);
+  border-radius: 1.875rem;
+  background: var(--bgColor);
+  box-shadow: var(--twoBoxShadow);
+  display: flex;
+  flex-direction: column;
+  transition: all .2s ease;
+
+  .logo {
+    font-family: var(--bauhaus);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: .9375rem;
+    color: var(--oneColor);
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .nav {
+    margin-top: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9375rem;
+
+    li {
+      a {
+        width: 100%;
+        color: var(--oneColor);
+        font-size: 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 1.5625rem;
+        background: var(--bgColor);
+        border-radius: 1.25rem;
+        padding: .625rem 1.25rem;
+        transition: all .3s ease;
+
+        &:hover {
+          box-shadow: var(--twoBoxShadow);
+        }
+      }
+
+      a.active {
+        box-shadow: var(--twoBoxShadow);
+      }
+    }
+  }
+
+  .social {
+    position: absolute;
+    bottom: 3.125rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: all .5s ease;
+
+    li {
+      a {
+        color: var(--oneColor);
+        font-size: 1.5rem;
+        transition: all .3s ease;
+        
+        &:hover {
+          color: var(--second);
+        }
+      }
+    
+      .share {
+        width: 2.1875rem;
+        height: 2.1875rem;
+        background: var(--second);
+        padding: .625rem;
+        border-radius: 50%;
+        transition: all .3s ease;
+    
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }    
+  }
+}
+
+.sideMenu.active {
+  width: 7%;
+  align-items: center;
+  overflow: hidden;
+  transition: all .3s ease;
+
+  .logo {
+    .brand {
+      display: none;
+    }
+  }
+
+  .nav {
+    li {
+      a {
+        .name {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .social {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .sideMenu {
+    display: none;
+    width: 0%;
+    transition: all .8s ease;
+  }
+  
+  .sideMenu.active {
+    display: flex;
+    width: 18%;
+  }
+}

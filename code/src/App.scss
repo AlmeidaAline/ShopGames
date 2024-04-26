@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --roboto: 'Roboto', sans-serif;
+  --bauhaus: 'Bauhaus 93';
+
+  --primary: #0d171f;
+  --second: #0998a8;
+  --bgColor: #192938;
+  --oneColor: #fff;
+  --twoColor: #ebebeb;
+  --threeColor: #ff0000;
+  --fourColor: #9c9c9c;
+
+  --oneBoxShadow: -.3125rem -.3125rem .9375rem rgba(255, 255, 255, .15), .3125rem .3125rem .9375rem rgba(0, 0, 0, .35), inset -.3125rem -.3125rem .9375rem rgba(255, 255, 255, .15), inset .3125rem .3125rem .9375rem rgba(0, 0, 0, .35);
+  --twoBoxShadow: -.3125rem -.3125rem .9375rem rgba(255, 255, 255, .1), .3125rem .3125rem .9375rem rgba(0, 0, 0, .35);
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bgColor);
+  font-family: var(--roboto);
+  letter-spacing: .1rem;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  input {
+    outline: none;
+    border: none;
+  }
+
+  h1,
+  h2,
+  h4,
+  p {
+    color: var(--oneColor);
+  }
+
+  .swiper {
+    width: 90%;
+    padding-bottom: 1.875rem;
+
+    .swiper-slide {
+      width: 34.375rem;
+      height: 21.875rem;
+      padding: .5rem;
+    }
+
+    .swiper-slide.swiper-slide-active {
+
+      .video.active iframe {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .playBtn.active {
+
+        .play {
+          display: none;
+        }
+
+        .pause {
+          display: block;
+        }
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      bottom: 0 !important;
+      width: 3.125rem;
+      height: 3.125rem;
+      background: rgba(255, 255, 255, .2);
+      border-radius: 50%;
+      backdrop-filter: blur(1.25rem);
+      -webkit-backdrop-filter: blur(1.25rem);
+
+      &::after {
+        color: var(--oneColor);
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}

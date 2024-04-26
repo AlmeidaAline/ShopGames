@@ -1,0 +1,68 @@
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.875rem;
+  background: var(--bgColor);
+  border: .5rem solid var(--bgColor);
+  box-shadow: var(--oneBoxShadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.875rem;
+  overflow: hidden;
+  transition: all .5s ease;
+
+  .banner {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    background: var(--bgColor);
+    border: .08rem solid rgba(0, 0, 0, .1);
+    border-radius: 1.875rem;
+    box-shadow: var(--twoBoxShadow);
+    transition: all .2s ease;
+
+    section {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      top: 100vh;
+      padding: 0 1.875rem;
+      bottom: 0;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+      transform-origin: bottom;
+      z-index: 100;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    section.active {
+      top: 6.25rem;
+      height: auto;
+      overflow-y: visible;
+      opacity: 1;
+    }
+  }
+
+  .banner.active {
+    width: 93%;
+    transition: all .3s ease;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  main {
+    .banner {
+      width: 100%;
+    }
+    .banner.active {
+      width: 82%;
+    }
+  }
+}

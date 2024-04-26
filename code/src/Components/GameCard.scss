@@ -1,0 +1,120 @@
+.gameCard {
+  position: relative;
+  padding: 1.5625rem 1.25rem;
+  margin-bottom: 1.5625rem;
+  width: auto;
+  height: 25rem;
+  border: .1rem solid rgba(0, 0, 0, .1);
+  border-radius: 1.25rem;
+  background: var(--bgColor);
+  box-shadow: var(--twoBoxShadow);
+
+  img {
+    border-radius: 1.25rem;
+    margin-bottom: .9375rem;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 50%;
+  }
+
+  .like {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1875rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--bgColor);
+    padding: .3125rem;
+    border-radius: 0 0 0 1.25rem;
+    color: var(--oneColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+  }
+
+  .like.active {
+    color: var(--second);
+  }
+
+  span {
+    color: var(--oneColor);
+  }
+
+  .gameFeature {
+    display: flex;
+    justify-content: space-between;
+
+    .gameType {
+      background: var(--second);
+      padding: .3125rem .625rem;
+      border-radius: .625rem;
+      font-weight: 400;
+    }
+
+    .gameRating {
+      font-size: 1.3rem;
+      color: var(--second);
+
+      i {
+        margin-left: .125rem;
+      }
+    }
+  }
+
+  .gameTitle {
+    margin-top: .625rem;
+    font-family: var(--bauhaus);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+  }
+
+  .gamePrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .discount {
+      background: var(--threeColor);
+      padding: .125rem .3125rem;
+      border-radius: .625rem;
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    .prevPrice {
+      text-decoration: line-through;
+      text-decoration-color: var(--threeColor);
+      text-decoration-thickness: .1875rem;
+      font-size: .8rem;
+    }
+
+    .currentPrice {
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+  }
+
+  .addCart {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: var(--oneColor);
+    background: var(--second);
+    padding: .625rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem 0;
+    font-size: 1.2rem;
+    transition: all .3s ease;
+
+    &:hover {
+      background: var(--primary);
+    }
+  }
+}

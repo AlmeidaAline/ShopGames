@@ -1,0 +1,91 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.875rem;
+  background: transparent;
+  z-index: 100;
+
+  .menu {
+    font-size: 1.8rem;
+    color: var(--oneColor);
+  }
+
+  .userItems {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    .icon {
+      position: relative;
+      color: var(--oneColor);
+      font-size: 1.5rem;
+      width: 3.125rem;
+      height: 3.125rem;
+      border-radius: .625rem;
+      box-shadow: var(--twoBoxShadow);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .like,
+      .cart {
+        position: absolute;
+        right: 0;
+        bottom: .625rem;
+        font-size: .8rem;
+        font-weight: 800;
+        width: 1.25rem;
+        height: 1.25rem;
+        padding: .1875rem;
+        color: var(--oneColor);
+        background: var(--second);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .avatar {
+      width: 9.375rem;
+      height: 3.125rem;
+      padding: .625rem 1.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .9375rem;
+      border-radius: .625rem;
+      box-shadow: var(--twoBoxShadow);
+
+      a {
+        font-size: 1.8rem;
+
+        img {
+          width: 2.1875rem;
+          height: 2.1875rem;
+          border-radius: 50%;
+        }
+      }
+
+      .user {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          color: var(--oneColor);
+          font-size: .7rem;
+        }
+
+        a {
+          color: var(--oneColor);
+          font-size: .6rem;
+        }
+      }
+    }
+  }
+}
